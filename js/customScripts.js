@@ -22,7 +22,7 @@ document.getElementById('saveNewCard').onclick = function () {
   if (document.getElementById('cardTitle').value.trim().length != 0 && document.getElementById('cardDescription').value.trim().length != 0) {
     var activeCardId = this.getAttribute("data-id");
     var getExistingNumberOfCards = document.querySelectorAll('.customCardBody[data-id="' + activeCardId + '"] .toDoListCard .card').length;
-    var populateRow = "<div class='row m-0'><div class='col-11 p-0'>" + document.getElementById('cardTitle').value + "</div><div class='col-1 p-0 text-right editIcon' data-toggle='modal' data-target='#editCardModal' onclick='editButtonClick(" + activeCardId + "," + (getExistingNumberOfCards + 1) + ")'><i class='fas fa-edit'></i></div></div>"
+    var populateRow = "<div class='row m-0'><div class='col-10 p-0'>" + document.getElementById('cardTitle').value + "</div><div class='col-1 p-0 text-right editIcon' data-toggle='modal' data-target='#editCardModal' onclick='editButtonClick(" + activeCardId + "," + (getExistingNumberOfCards + 1) + ")'><i class='fas fa-edit'></i></div><div class='col-1 p-0 text-right deleteCardIcon' onclick='deleteCardClick(" + activeCardId + "," + (getExistingNumberOfCards + 1) + ")'><i class='fas fa-trash'></i></div></div>"
     var populateCard = '<div class="card" data-id="' + (getExistingNumberOfCards + 1) + '"> <div class="card-body">' + populateRow + '</div></div>'
     document.querySelector('.customCardBody[data-id="' + activeCardId + '"] .toDoListCard').innerHTML += populateCard
 
@@ -105,6 +105,11 @@ function deleteFunction(dataId) {
   document.querySelector('.listColumn[data-id="' + dataId + '"]').remove();
   console.log("clicking delete " + getDeleteIndex);
   console.log(JSON.stringify(lists))
+}
+
+function deleteCardClick(listId, Cardid) {
+  lists[listId - 1].Lists.splice(Cardid - 1, 1);
+  document.querySelector('.customCardBody[data-id="' + listId + '"] .card[data-id="' + Cardid + '"]').remove();
 }
 
 function getFormattedDate() {

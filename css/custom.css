@@ -74,3 +74,9 @@
 #addCardModal .modal-footer {
   justify-content: space-between !important;
 }
+.deleteCardIcon {
+  cursor: pointer;
+}
+.deleteCardIcon:hover {
+  color: red;
+}
