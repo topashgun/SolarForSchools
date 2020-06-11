@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/custom.css">
+    <link rel="stylesheet" href="fontawesome/css/all.css">
+    <title>To Do App</title>
+</head>
+
+<body>
+
+    <div class="container-fluid">
+        <div class="row mt-2 mb-2">
+            <div class="col-lg-10 col-md-8 col-6">
+                <h4>To Do App</h4>
+            </div>
+            <div class="col-lg-2 col-md-4 col-6 text-right">
+                <button type="button" class="btn btn-block btn-success" id="addNewList">Add New List</button>
+            </div>
+        </div>
+        <div class="row" id="listsDiv">
+
+        </div>
+    </div>
+
+    <div class="modal fade" id="addCardModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Add New Card</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-12">
+                            <input type="text" class="form-control newCardTitle" placeholder="Card Title"
+                                id="cardTitle">
+                        </div>
+                        <div class="col-12">
+                            <textarea class="form-control mt-1 newCardDescription" placeholder="Card Description"
+                                rows="4" id="cardDescription"></textarea>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <div>
+                        <div class="alert alert-success successAlert" role="alert" style="display: none;"
+                            id="cardAddedAlert">
+                            New Card Added !
+                        </div>
+                    </div>
+
+                    <div class="row text-center">
+                        <div class="btn-group" role="group" aria-label="Basic example">
+                            <button type="button" class="btn btn-warning" data-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-success" id="saveNewCard">Save</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="editCardModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Edit Card</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="card">
+                                <h5 class="card-header" id="editCardTitle"></h5>
+                                <div class="card-body">
+                                    <p class="card-text" id="editCardDescription"></p>
+                                </div>
+                            </div>
+                            <textarea class="form-control mt-2 addComment" placeholder="Add Comment" rows="4"
+                                id="addComment"></textarea>
+                            <div id="commentsSection" class="px-2"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <div class="row text-center">
+                        <div class="btn-group" role="group" aria-label="Basic example">
+                            <button type="button" class="btn btn-warning" data-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-success" id="editCard">Save</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/sortable.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+    <script src="js/customScripts.js"></script>
+</body>
+
+</html>

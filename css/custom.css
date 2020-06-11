@@ -1,0 +1,76 @@
+.customCardBody,
+.customCardHeader {
+  padding: 0.5rem;
+}
+.customCardBody {
+  background: #f4f4f4;
+}
+.customCardHeader {
+  background: #2ba84a;
+  color: #fcfffc;
+  font-size: 14px;
+}
+.toDoListCard {
+  margin: 10px 0;
+  border: none;
+  background-color: transparent;
+}
+.toDoListCard .card-body {
+  padding: 5px 10px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 3.5px;
+}
+.deleteIcon {
+  float: right;
+  cursor: pointer;
+}
+.customCard {
+  border: none;
+}
+.addNewCard {
+  border-top-left-radius: 0px;
+  border-top-right-radius: 0px;
+  font-size: 14px;
+}
+.toDoListCard .card {
+  padding: 5px 0;
+  background-color: transparent !important;
+  border: none !important;
+}
+.editIcon {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.editIcon:hover {
+  color: #2ba84a;
+  cursor: pointer;
+}
+#editCardTitle {
+  font-size: 16px;
+  padding: 10px !important;
+}
+#editCardModal .card-body {
+  padding: 10px;
+}
+#editCardDescription {
+  font-size: 14px;
+}
+
+.commentP {
+  font-size: 13px;
+}
+.commentTime {
+  font-size: 11px;
+}
+.redBorder {
+  border: 1.5px solid red;
+}
+.successAlert {
+  padding: 2px 10px;
+  font-size: 12px;
+  margin-bottom: 0 !important;
+}
+#addCardModal .modal-footer {
+  justify-content: space-between !important;
+}
